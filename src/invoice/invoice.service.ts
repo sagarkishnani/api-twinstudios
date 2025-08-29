@@ -171,6 +171,8 @@ export class InvoiceService {
                               text: `${data.moneda == 'PEN' ? INVOICE.PEN : INVOICE.USD}${calcularPrecio(
                                 data.tipo_cotizacion,
                                 data.tipo_desarrollo,
+                                data.moneda,
+                                INVOICE.DOLLAR_PRICE,
                                 data.descuento,
                                 data.porcentaje_descuento,
                               ).toLocaleString('es-PE', {

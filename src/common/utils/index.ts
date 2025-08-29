@@ -41,10 +41,14 @@ export function calcularPrecio(
     | 'ECOMMERCE_WHATSAPP'
     | 'ECOMMERCE',
   tipoDesarrollo: 'WORDPRESS' | 'CODIGO',
+  moneda,
+  tipoCambio,
   descuento?,
   porcentaje_descuento?,
 ) {
-  const precio = getPrice(tipoCotizacion, tipoDesarrollo);
+  let precio = getPrice(tipoCotizacion, tipoDesarrollo);
+
+  precio = moneda === 'PEN' ? precio : precio / tipoCambio;
   if (descuento) return precio * porcentaje_descuento;
   return precio;
 }
@@ -65,7 +69,7 @@ export function calcularPrecioOpcional({
   let precio = moneda === 'PEN' ? precioBase : precioBase / tipoCambio;
 
   if (descuento) {
-    precio = precio - (precio * porcentajeDescuento);
+    precio = precio - precio * porcentajeDescuento;
   }
 
   if (precio < 0) precio = 0;
