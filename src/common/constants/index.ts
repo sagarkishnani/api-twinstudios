@@ -69,7 +69,7 @@ export const pricingDictionary: Record<
     WORDPRESS: {
       precio: 2400,
       caracteristicas: [
-        'E-commerce completo con WooCommerce',
+        'E-commerce con WooCommerce',
         'Página web personalizada con diseño responsivo y páginas por sección (Nosotros, Servicios, Contacto, etc.)',
         'Sliders interactivos o video de presentación',
         'Funciones dinámicas (call to action, animaciones)',
@@ -123,6 +123,34 @@ export const pricingDictionary: Record<
         'Carrito de compras y pasarela de pagos con delivery con Culqi, Izipay u otros',
         'Optimización SEO',
         'Capacitación (datos de SEO, cambio de contenidos y configuraciones generales)',
+      ],
+    },
+  },
+  ECOMMERCE_USA: {
+    WORDPRESS: {
+      precio: 4200,
+      caracteristicas: [
+        'E-commerce with WooCommerce integration',
+        'Custom website with responsive design and section pages (About Us, Services, Contact, etc.)',
+        'Interactive sliders or presentation video',
+        'Dynamic features (call to action, animations)',
+        'Contact form (email submission)',
+        'Product management',
+        'SEO optimization',
+        'Training (SEO basics, content updates, and general settings)',
+      ],
+    },
+    CODIGO: {
+      precio: 6300,
+      caracteristicas: [
+        'Fully custom website with responsive design and section pages (About Us, Services, Contact, etc.)',
+        'Interactive sliders or presentation video',
+        'Dynamic features (call to action, animations)',
+        'Contact form (email submission)',
+        'API integrations (if required)',
+        'Product management',
+        'SEO optimization',
+        'Training (SEO basics, content updates, and general settings)',
       ],
     },
   },

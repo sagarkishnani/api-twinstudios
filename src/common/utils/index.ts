@@ -66,12 +66,10 @@ export function calcularPrecioOpcional({
 
   if (descuento) {
     precio = precio - (precio * porcentajeDescuento);
-      console.log(precio);
   }
 
   if (precio < 0) precio = 0;
 
   const simbolo = moneda === 'PEN' ? 'S/.' : '$';
-  console.log(`${simbolo}${precio.toFixed(2)}`);
   return `${simbolo}${precio.toFixed(2)}`;
 }

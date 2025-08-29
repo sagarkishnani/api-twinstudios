@@ -2,7 +2,8 @@ export type TipoCotizacion =
   | 'SINGLE_PAGE'
   | 'LANDING_PAGE'
   | 'ECOMMERCE_WHATSAPP'
-  | 'ECOMMERCE';
+  | 'ECOMMERCE'
+  | 'ECOMMERCE_USA';
 
 export type TipoDesarrollo = 'WORDPRESS' | 'CODIGO';
 
