@@ -2,6 +2,7 @@ export class CreateInvoiceDto {
   empresa: string;
   fecha: string;
   moneda: 'PEN' | 'USD';
+  esIngles: string;
   tipo_cotizacion:
     | 'SINGLE_PAGE'
     | 'LANDING_PAGE'
@@ -14,10 +15,6 @@ export class CreateInvoiceDto {
     nombre: string;
     ciudad: string;
     email: string;
-  };
-  para: {
-    nombre: string;
-    ciudad: string;
   };
   opcionales?: {
     caracteristicas: string[];

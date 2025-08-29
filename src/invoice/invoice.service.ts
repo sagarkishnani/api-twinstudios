@@ -24,7 +24,7 @@ export class InvoiceService {
     };
 
     const printer = new PdfPrinter(fonts);
-
+    
     const logo_64 =
       'data:image/png;base64,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';
     const bg_64 =
@@ -63,7 +63,7 @@ export class InvoiceService {
                 },
 
                 {
-                  text: `Fecha: ${data.fecha}`,
+                  text: `${data.esIngles === 'true' ? 'Date' : 'Fecha'}: ${data.fecha}`,
                   style: 'small',
                 },
 
@@ -72,7 +72,7 @@ export class InvoiceService {
                     {
                       width: '50%',
                       stack: [
-                        { text: 'De', style: 'sectionHeader' },
+                        { text: `${data.esIngles === 'true' ? 'From' : 'De'}`, style: 'sectionHeader' },
                         {
                           text: INVOICE.NAME,
                           style: 'sectionSubtitle',
@@ -92,9 +92,9 @@ export class InvoiceService {
                     {
                       width: '50%',
                       stack: [
-                        { text: 'Para', style: 'sectionHeader' },
-                        { text: data.para.nombre, style: 'sectionSubtitle' },
-                        { text: data.para.ciudad, style: 'sectionText' },
+                        { text: `${data.esIngles === 'true' ? 'To' : 'Para'}`, style: 'sectionHeader' },
+                        { text: data.cliente.nombre, style: 'sectionSubtitle' },
+                        { text: data.cliente.ciudad, style: 'sectionText' },
                         { text: data.cliente.email, style: 'sectionText' },
                       ],
                     },
@@ -116,7 +116,7 @@ export class InvoiceService {
                               alignment: 'center',
                             },
                             {
-                              text: 'Precio',
+                              text: `${data.esIngles === 'true' ? 'Price' : 'Precio'}`,
                               bold: true,
                               color: '#FFFFFF',
                               alignment: 'center',
@@ -213,13 +213,13 @@ export class InvoiceService {
                           body: [
                             [
                               {
-                                text: 'Opcional',
+                                text: `${data.esIngles === 'true' ? 'Optional' : 'Opcional'}`,
                                 bold: true,
                                 color: '#FFFFFF',
                                 alignment: 'center',
                               },
                               {
-                                text: 'Precio',
+                                text: `${data.esIngles === 'true' ? 'Price' : 'Precio'}`,
                                 bold: true,
                                 color: '#FFFFFF',
                                 alignment: 'center',
@@ -326,7 +326,7 @@ export class InvoiceService {
                 {
                   stack: [
                     {
-                      text: '¿Preguntas?',
+                      text: `${data.esIngles === 'true' ? 'Questions?' : '¿Preguntas?'}`,
                       style: 'footerPrompt',
                       margin: [40, 10, 0, 5],
                     },
